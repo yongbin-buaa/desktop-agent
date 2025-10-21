@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinese-English Translation | Real-time Translator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌐 Real-time Chinese-English Translator</h1>
+            <p class="subtitle">Instant translation between Chinese and English</p>
+        </header>
+
+        <main>
+            <div class="translator-container">
+                <!-- Language Selection -->
+                <div class="language-selector">
+                    <div class="lang-option">
+                        <label for="source-lang">From:</label>
+                        <select id="source-lang">
+                            <option value="zh-CN">Chinese (Simplified)</option>
+                            <option value="zh-TW">Chinese (Traditional)</option>
+                            <option value="en">English</option>
+                        </select>
+                    </div>
+
+                    <button id="swap-languages" class="swap-btn" title="Swap languages">
+                        ⇄
+                    </button>
+
+                    <div class="lang-option">
+                        <label for="target-lang">To:</label>
+                        <select id="target-lang">
+                            <option value="en">English</option>
+                            <option value="zh-CN">Chinese (Simplified)</option>
+                            <option value="zh-TW">Chinese (Traditional)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Translation Areas -->
+                <div class="translation-areas">
+                    <div class="input-area">
+                        <div class="area-header">
+                            <h3>Source Text</h3>
+                            <button id="clear-input" class="clear-btn">Clear</button>
+                        </div>
+                        <textarea
+                            id="source-text"
+                            placeholder="Enter text to translate..."
+                            spellcheck="false"
+                        ></textarea>
+                        <div class="char-count">
+                            <span id="char-count">0</span> characters
+                        </div>
+                    </div>
+
+                    <div class="output-area">
+                        <div class="area-header">
+                            <h3>Translation</h3>
+                            <button id="copy-translation" class="copy-btn" title="Copy translation">
+                                📋 Copy
+                            </button>
+                        </div>
+                        <div id="translation-output" class="output-text">
+                            Translation will appear here...
+                        </div>
+                        <div id="loading" class="loading hidden">
+                            <div class="spinner"></div>
+                            Translating...
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Examples -->
+                <div class="examples-section">
+                    <h4>Quick Examples:</h4>
+                    <div class="examples">
+                        <button class="example-btn" data-text="你好，世界！">你好，世界！</button>
+                        <button class="example-btn" data-text="今天天气很好">今天天气很好</button>
+                        <button class="example-btn" data-text="Hello, how are you?">Hello, how are you?</button>
+                        <button class="example-btn" data-text="Thank you very much!">Thank you very much!</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features Section -->
+            <div class="features">
+                <div class="feature">
+                    <span class="feature-icon">⚡</span>
+                    <h4>Real-time Translation</h4>
+                    <p>Get instant translations as you type</p>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">🔄</span>
+                    <h4>Bidirectional</h4>
+                    <p>Translate between Chinese and English both ways</p>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">💯</span>
+                    <h4>Free & Simple</h4>
+                    <p>No sign-up required, just start translating</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Built with ❤️ for seamless translation | Powered by multiple translation APIs</p>
+        </footer>
+    </div>
+
+    <div id="notification" class="notification hidden"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

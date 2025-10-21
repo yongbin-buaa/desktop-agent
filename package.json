@@ -1,0 +1,24 @@
+{
+  "name": "chinese-english-translator",
+  "version": "1.0.0",
+  "description": "A beautiful, real-time Chinese-English translation website",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "serve": "npx http-server -p 8000"
+  },
+  "keywords": [
+    "translation",
+    "chinese",
+    "english",
+    "translator",
+    "real-time",
+    "web-app"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "http://127.0.0.1:16802/git/yongbin-buaa/desktop-agent"
+  }
+}
